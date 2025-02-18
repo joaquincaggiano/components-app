@@ -8,11 +8,15 @@ import 'react-native-reanimated';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import "../global.css"
 import { Text } from 'react-native';
-
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { useThemeColor } from '@/hooks/useThemeColor';
+import ThemeView from '@/components/ui/ThemeView';
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
+
+  const backgroundColor = useThemeColor({}, "background")
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
@@ -29,12 +33,12 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Text className="text-3xl">Hola mundo</Text>
-      {/* <Stack>
-
-      </Stack> */}
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <GestureHandlerRootView style={{ flex: 1, backgroundColor }}>
+      <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+        <ThemeView safe>
+          <Text>Hola mundo</Text>
+        </ThemeView>
+      </ThemeProvider>
+    </GestureHandlerRootView>
   );
 }
