@@ -1,4 +1,5 @@
 import MenuItem from "@/components/menu/MenuItem";
+import ThemeText from "@/components/ui/ThemeText";
 import ThemeView from "@/components/ui/ThemeView";
 import {
   animationMenuRoutes,
@@ -10,6 +11,9 @@ import { View } from "react-native";
 const ComponentsApp = () => {
   return (
     <ThemeView margin>
+      <ThemeText type="h1" className="mb-5">
+        Components App
+      </ThemeText>
       {animationMenuRoutes.map((route, index) => (
         <MenuItem
           key={route.nameScreen}
