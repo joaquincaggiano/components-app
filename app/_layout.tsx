@@ -6,15 +6,12 @@ import {
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
-import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 import "react-native-reanimated";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import "../global.css";
-import { Text } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { useThemeColor } from "@/hooks/useThemeColor";
-import ThemeView from "@/components/ui/ThemeView";
 import { allRoutes } from "@/constants/Routes";
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();

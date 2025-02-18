@@ -1,10 +1,12 @@
-import { View, Text } from 'react-native';
+import ThemeButton from "@/components/ui/ThemeButton";
+import ThemeView from "@/components/ui/ThemeView";
 
 const Animation101Screen = () => {
   return (
-    <View>
-      <Text>Animation101Screen</Text>
-    </View>
+    <ThemeView margin className="gap-y-4">
+      <ThemeButton onPress={() => {}}>FadeIn</ThemeButton>
+      <ThemeButton onPress={() => {}}>FadeOut</ThemeButton>
+    </ThemeView>
   );
 };
 export default Animation101Screen;
