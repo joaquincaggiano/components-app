@@ -1,9 +1,9 @@
-import ThemeView from '@/components/ui/ThemeView'
-import ThemeText from '@/components/ui/ThemeText'
-import { StatusBar } from 'expo-status-bar'
-import { Platform } from 'react-native'
-import ThemeButton from '@/components/ui/ThemeButton'
-import { router } from 'expo-router'
+import ThemeView from "@/components/ui/ThemeView";
+import ThemeText from "@/components/ui/ThemeText";
+import { StatusBar } from "expo-status-bar";
+import { Platform } from "react-native";
+import ThemeButton from "@/components/ui/ThemeButton";
+import { router } from "expo-router";
 
 const ModalWindow2 = () => {
   return (
@@ -12,9 +12,9 @@ const ModalWindow2 = () => {
 
       <ThemeButton onPress={() => router.dismiss()}>Cerrar</ThemeButton>
 
-      <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
+      <StatusBar style={Platform.OS === "ios" ? "light" : "auto"} />
     </ThemeView>
-  )
-}
+  );
+};
 
-export default ModalWindow2
+export default ModalWindow2;
