@@ -23,7 +23,7 @@ export const menuRoutes: MenuRoute[] = [
   {
     title: "Modal",
     icon: "copy-outline",
-    nameScreen: "modal/index",
+    nameScreen: "modal", // no hace falta poner el /layout
     href: "/modal",
   },
   {
